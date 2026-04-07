@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#6366f1" />
-  <meta name="description" content="Controla tus gastos diarios, categorías y presupuestos mensuales." />
+  <meta name="theme-color" content="#2c3e50" />
+  <meta name="description" content="Gestor financiero para controlar tus gastos en el mes. No temes a nada si eres capaz de controlarlo - GastoSmart" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="GastoSmart" />
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="manifest" href="./manifest.json" />
+  
+  <!-- iOS -->
+  <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
+  <link rel="apple-touch-startup-image" href="img/icons/icon-512x512.png">
+  
   <title>GastoSmart</title>
 </head>
+
 <body>
 
   <div id="offline-banner" class="offline-banner hidden">
@@ -24,7 +36,7 @@
     <div class="header-right">
       <button class="btn-icon" id="btn-download-pdf" title="Descargar reporte del mes">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14"/>
+          <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14" />
         </svg>
       </button>
     </div>
@@ -33,26 +45,29 @@
   <nav class="bottom-nav">
     <button class="nav-item active" data-view="dashboard">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-        <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" />
       </svg>
       <span>Inicio</span>
     </button>
     <button class="nav-item" data-view="gastos">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12h14"/>
+        <path d="M12 5v14M5 12h14" />
       </svg>
       <span>Gastos</span>
     </button>
     <button class="nav-item" data-view="presupuesto">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 3" />
       </svg>
       <span>Presupuesto</span>
     </button>
     <button class="nav-item" data-view="graficos">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
       <span>Gráficos</span>
     </button>
@@ -165,7 +180,8 @@
           </div>
           <div class="input-group">
             <span class="input-prefix">$</span>
-            <input type="number" class="form-input budget-input" data-cat="comida" placeholder="Límite" min="5000" step="5000" />
+            <input type="number" class="form-input budget-input" data-cat="comida" placeholder="Límite" min="5000"
+              step="5000" />
           </div>
           <span class="field-error" id="err-budget-comida"></span>
           <div class="progress-bar-track mt-xs">
@@ -180,7 +196,8 @@
           </div>
           <div class="input-group">
             <span class="input-prefix">$</span>
-            <input type="number" class="form-input budget-input" data-cat="transporte" placeholder="Límite" min="5000" step="5000" />
+            <input type="number" class="form-input budget-input" data-cat="transporte" placeholder="Límite" min="5000"
+              step="5000" />
           </div>
           <span class="field-error" id="err-budget-transporte"></span>
           <div class="progress-bar-track mt-xs">
@@ -195,7 +212,8 @@
           </div>
           <div class="input-group">
             <span class="input-prefix">$</span>
-            <input type="number" class="form-input budget-input" data-cat="ocio" placeholder="Límite" min="5000" step="5000" />
+            <input type="number" class="form-input budget-input" data-cat="ocio" placeholder="Límite" min="5000"
+              step="5000" />
           </div>
           <span class="field-error" id="err-budget-ocio"></span>
           <div class="progress-bar-track mt-xs">
@@ -210,7 +228,8 @@
           </div>
           <div class="input-group">
             <span class="input-prefix">$</span>
-            <input type="number" class="form-input budget-input" data-cat="salud" placeholder="Límite" min="5000" step="5000" />
+            <input type="number" class="form-input budget-input" data-cat="salud" placeholder="Límite" min="5000"
+              step="5000" />
           </div>
           <span class="field-error" id="err-budget-salud"></span>
           <div class="progress-bar-track mt-xs">
@@ -225,7 +244,8 @@
           </div>
           <div class="input-group">
             <span class="input-prefix">$</span>
-            <input type="number" class="form-input budget-input" data-cat="educacion" placeholder="Límite" min="5000" step="5000" />
+            <input type="number" class="form-input budget-input" data-cat="educacion" placeholder="Límite" min="5000"
+              step="5000" />
           </div>
           <span class="field-error" id="err-budget-educacion"></span>
           <div class="progress-bar-track mt-xs">
@@ -240,7 +260,8 @@
           </div>
           <div class="input-group">
             <span class="input-prefix">$</span>
-            <input type="number" class="form-input budget-input" data-cat="hogar" placeholder="Límite" min="5000" step="5000" />
+            <input type="number" class="form-input budget-input" data-cat="hogar" placeholder="Límite" min="5000"
+              step="5000" />
           </div>
           <span class="field-error" id="err-budget-hogar"></span>
           <div class="progress-bar-track mt-xs">
@@ -255,7 +276,8 @@
           </div>
           <div class="input-group">
             <span class="input-prefix">$</span>
-            <input type="number" class="form-input budget-input" data-cat="otros" placeholder="Límite" min="5000" step="5000" />
+            <input type="number" class="form-input budget-input" data-cat="otros" placeholder="Límite" min="5000"
+              step="5000" />
           </div>
           <span class="field-error" id="err-budget-otros"></span>
           <div class="progress-bar-track mt-xs">
@@ -328,7 +350,8 @@
         <h2 id="modal-title">Registrar Gasto</h2>
         <button class="btn-icon" id="btn-close-modal" aria-label="Cerrar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
       </div>
@@ -337,8 +360,8 @@
 
         <div class="form-group">
           <label class="form-label" for="exp-description">Descripción *</label>
-          <input type="text" id="exp-description" class="form-input"
-                 placeholder="Ej. Almuerzo en restaurante" maxlength="80" required />
+          <input type="text" id="exp-description" class="form-input" placeholder="Ej. Almuerzo en restaurante"
+            maxlength="80" required />
           <span class="field-error" id="err-description"></span>
         </div>
 
@@ -347,8 +370,7 @@
             <label class="form-label" for="exp-amount">Monto *</label>
             <div class="input-group">
               <span class="input-prefix">$</span>
-              <input type="number" id="exp-amount" class="form-input"
-                     placeholder="0" min="1000" step="100" required />
+              <input type="number" id="exp-amount" class="form-input" placeholder="0" min="1000" step="100" required />
             </div>
             <span class="field-error" id="err-amount"></span>
           </div>
@@ -376,8 +398,8 @@
 
         <div class="form-group">
           <label class="form-label" for="exp-notes">Notas (opcional)</label>
-          <textarea id="exp-notes" class="form-input form-textarea"
-                    placeholder="Comentario adicional..." maxlength="200" rows="2"></textarea>
+          <textarea id="exp-notes" class="form-input form-textarea" placeholder="Comentario adicional..."
+            maxlength="200" rows="2"></textarea>
         </div>
 
         <div class="modal-actions">
@@ -399,4 +421,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="./js/app.js"></script>
 </body>
+
 </html>

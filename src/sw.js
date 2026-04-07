@@ -10,6 +10,7 @@ const MAX_CACHE_ITEMS = 50; // Límite de items en caché dinámico
 const STATIC_FILES = [
     './',
     './index.html',
+    './manifest.json',
     './css/styles.css',
     './js/app.js',
     './js/categorias.js',
